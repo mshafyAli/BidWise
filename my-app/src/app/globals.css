@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.slick-slide > div {
+    margin: 0 4px;
+    
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Outfit', sans-serif;
+  }
+  .banner{
+    background-image: url('/banner.webp');
+    background-size: cover;
+    background-position: center;
+  }
+  @media (min-width: 1024px) { /* For laptops and desktops */
+    .banner {
+      background-position: top; /* Adjust as needed */
+    }
+  }
+  .Cta {
+    /* Default styles for mobile */
+    background-color: black; /* Black background for mobile */
+    background-image: none;  /* No image on mobile */
+  }
+  
+  @media (min-width: 768px) { /* Adjust the min-width as per your breakpoints */
+    .Cta {
+      background-color: transparent; /* Remove black background on larger screens */
+      background-image: url('/cta-image.webp');
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  .banner1{
+    background-color: black; /* Black background for mobile */
+    background-image: none; 
+  }
+
+  @media (min-width: 768px) { /* Adjust the min-width as per your breakpoints */
+    .banner1 {
+      background-color: transparent; /* Remove black background on larger screens */
+      background-image: url('/banner1.webp');
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  .Cta1{
+    background-image: url('/cta.webp');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .termsHead {
+    @apply text-lg font-semibold text-primary;
+  }
