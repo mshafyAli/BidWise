@@ -2,10 +2,10 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image"; // Importing Next.js Image component
 
-import WebBg from "./public/WebBg.webp";
-import MobileBg from "./public/MobileBg.webp";
-import WebRight from "./public/WebRight.webp";
-import MobileRight from "./public/MobileRight.webp";
+import WebBg from "../../../public/WebBg.webp";
+import MobileBg from "../../../public/MobileBg.webp";
+import WebRight from "../../../public/WebRight.webp";
+import MobileRight from "../../../public/MobileRight.webp";
 import { GoDotFill } from "react-icons/go";
 
 // Services data

@@ -10,35 +10,29 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': '#000000',
-        'secondary': "#FFBA1A",
-        'tertiary': '#51B27E',
-        'green': "#51B27E",
-        'para': "#696969",
-        'gray': "#696969",
-         
-
+        primary: "#E32049",
+        secondary: "#FFBA1A",
+        tertiary: "#51B27E",
+        darkGray: "#363636",
+        green: "#51B27E",
+        para: "#696969",
+        gray: "#696969",
       },
-      
+      backgroundImage: {
+        AwardBg: "url('/AwardBg.webp')",
+        AboutBg: "url('/src/assets/AboutBg.svg')",
+        servicesHero: "url('/src/assets/serviceshero.jpeg')",
+      },
+
       keyframes: {
-        blink: {
-          '0%, 100%': { opacity: 1 },
-          '50%': { opacity: 0 },
-        },
-        growShrink: {
-          '0%': { transform: 'scale(1)', color: '#078954' },
-          '50%': { transform: 'scale(1.5)', color: '#05b045' },
-          '100%': { transform: 'scale(1)', color: '#078954' },
-        },
-        darkLight: {
-          '0%, 100%': { backgroundColor: '#D9AA1A' }, // Light color
-          '50%': { backgroundColor: '#B8860B' }, // Dark color
+        "carousel-move": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
         },
       },
       animation: {
-        growShrink: 'growShrink 0.1s infinite',
-        blink: 'blink 0.3s infinite',
-        darkLight: 'darkLight 0.5s infinite', // Define the animation duration
+        "carousel-move": "carousel-move var(--duration, 20s) linear infinite",
+        "carousel-moveMd": "carousel-move var(--duration, 50s) linear infinite",
       },
     },
   },

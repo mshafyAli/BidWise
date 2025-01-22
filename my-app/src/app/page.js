@@ -4,25 +4,18 @@ import React, { useRef, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import Head from "next/head";
-import About from "@/Components/About";
-import NavBannerBg from "@/Components/Home/NavBannerBg";
-import Services from "@/Components/Home/Services";
 
 
 // Dynamically import non-critical components
 const Footer = dynamic(() => import("@/Components/Footer"));
 const StickyBtn = dynamic(() => import("@/Components/StickyBtn"));
 const SingleButton = dynamic(() => import("@/Components/SingleButton"));
-const GridCards = dynamic(() => import("@/Components/Home/GridCards"));
-const Subjects = dynamic(() => import("@/Components/Home/Subjects"));
-const Schedule = dynamic(() => import("@/Components/Home/Schedule"));
-const Cta = dynamic(() => import("@/Components/Home/Cta"));
-const Cta2 = dynamic(() => import("@/Components/Home/Cta2"));
-const OurService = dynamic(() => import("@/Components/Home/OurService"));
-const Review = dynamic(() => import("@/Components/Home/Review"));
 const Faq = dynamic(() => import("@/Components/Home/Faq"));
-
-
+const OurWork = dynamic(() => import("@/Components/Home/OurWork"));
+const Services = dynamic(() => import("@/Components/Home/Services"));
+const Brands = dynamic(() => import("@/Components/Home/Brands"));
+const Award = dynamic(() => import("@/Components/Home/Award"));
+const Worth = dynamic(() => import("@/Components/Home/Worth"));
 
 
 
@@ -68,16 +61,13 @@ const Home = () => {
           }
         `}</style>
       </Head>
-      <NavBannerBg/> 
+  
       <Services/>
-      <GridCards/>
-      <Subjects/>
-      <Schedule/>
-      <Cta/>
-      <OurService/>
-      <Cta2/>
-      <Review/>
+      <OurWork/>
+      <Brands/>
+      <Award/>
       <Faq/>
+      <Worth/>
       <SingleButton />
       <Footer />
       <StickyBtn />
