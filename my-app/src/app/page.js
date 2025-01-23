@@ -4,7 +4,7 @@ import React, { useRef, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import Head from "next/head";
-
+import Banner from "@/Components/Home/Banner";
 
 // Dynamically import non-critical components
 const Footer = dynamic(() => import("@/Components/Footer"));
@@ -16,9 +16,6 @@ const Services = dynamic(() => import("@/Components/Home/Services"));
 const Brands = dynamic(() => import("@/Components/Home/Brands"));
 const Award = dynamic(() => import("@/Components/Home/Award"));
 const Worth = dynamic(() => import("@/Components/Home/Worth"));
-
-
-
 
 const Home = () => {
   const router = useRouter();
@@ -51,7 +48,7 @@ const Home = () => {
     <div>
       <Head>
         <title>
-        British PhD Writers Uk - Providing Writing Consultancy by PhD Experts
+          British PhD Writers Uk - Providing Writing Consultancy by PhD Experts
         </title>
         <meta name="description" content="Home page description here" />
         {/* Add smooth scrolling behavior via CSS */}
@@ -61,13 +58,13 @@ const Home = () => {
           }
         `}</style>
       </Head>
-  
-      <Services/>
-      <OurWork/>
-      <Brands/>
-      <Award/>
-      <Faq/>
-      <Worth/>
+      <Banner />
+      <Services />
+      <OurWork />
+      <Brands />
+      <Award />
+      <Faq />
+      <Worth />
       <SingleButton />
       <Footer />
       <StickyBtn />
