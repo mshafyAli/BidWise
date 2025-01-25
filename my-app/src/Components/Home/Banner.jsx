@@ -1,4 +1,4 @@
-import Link from "next/link"
+
 import Image from "next/image"
 import { ChevronDown } from "lucide-react"
 
@@ -7,44 +7,16 @@ export default function Banner() {
     <div className="relative h-auto">
       {/* Background gradient */}
       <div
-        className="absolute inset-0 z-0"
-        style={{
-          background: "linear-gradient(180deg, rgba(13, 13, 31, 1) 30%, rgba(240, 24, 140, 1) 100%)",
-        }}
+        className="absolute inset-0 z-0 bannerColor"
+        // style={{
+        //   background: "linear-gradient(180deg, rgba(13, 13, 31, 1) 30%, rgba(240, 24, 140, 1) 100%)",
+        // }}
       />
 
       {/* Content */}
       <div className="relative z-10">
         {/* Navigation */}
-        <nav className="container mx-auto px-6 py-6">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Link href="/" className="text-white text-2xl font-bold">
-              BidWise
-            </Link>
-
-            {/* Navigation Links */}
-            <div className="hidden md:flex items-center space-x-8 text-white">
-              <div className="flex items-center space-x-1 cursor-pointer">
-                <span>Growth marketing</span>
-                <ChevronDown className="h-4 w-4" />
-              </div>
-              <div className="flex items-center space-x-1 cursor-pointer">
-                <span>Design</span>
-                <ChevronDown className="h-4 w-4" />
-              </div>
-              <Link href="/success-stories">Success stories</Link>
-              <Link href="/about">About</Link>
-              <Link href="/insights">Insights</Link>
-              <Link href="/tools">Tools</Link>
-            </div>
-
-            {/* CTA Button */}
-            <button className="bg-[#E6186F] text-white px-6 py-2 rounded-full hover:bg-[#d1165f] transition-colors">
-              Contact us
-            </button>
-          </div>
-        </nav>
+       
 
         {/* Hero Content */}
         <div className="container mx-auto px-6 pt-20 pb-48">

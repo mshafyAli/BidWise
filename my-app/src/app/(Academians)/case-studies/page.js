@@ -4,19 +4,16 @@ import React, { useRef, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import Head from "next/head";
-import Banner from "@/Components/Home/Banner";
+import Banner from "@/Components/CaseStudies/Banner";
 import Navbar from "@/Components/Navbar";
 
 // Dynamically import non-critical components
 const Footer = dynamic(() => import("@/Components/Footer"));
 const StickyBtn = dynamic(() => import("@/Components/StickyBtn"));
 const SingleButton = dynamic(() => import("@/Components/SingleButton"));
-const Faq = dynamic(() => import("@/Components/Home/Faq"));
-const OurWork = dynamic(() => import("@/Components/Home/OurWork"));
-const Services = dynamic(() => import("@/Components/Home/Services"));
-const Brands = dynamic(() => import("@/Components/Home/Brands"));
-const Award = dynamic(() => import("@/Components/Home/Award"));
-const Worth = dynamic(() => import("@/Components/Home/Worth"));
+const SubSection = dynamic(() => import("@/Components/CaseStudies/SubSection"));
+
+
 
 const Home = () => {
   const router = useRouter();
@@ -61,15 +58,10 @@ const Home = () => {
       </Head>
       <Navbar />
       <Banner />
-      <Services />
-      <OurWork />
-      <Brands />
-      <Award />
-      <Faq />
-      <Worth />
+      <SubSection/>
       <SingleButton />
       <Footer />
-      {/* <StickyBtn /> */}
+      <StickyBtn />
     </div>
   );
 };

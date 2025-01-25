@@ -55,6 +55,13 @@
     background-size: cover;
     background-position: center;
   }
+  .layout {
+    @apply max-w-7xl mx-auto md:px-4 px-4;
+  }
+  .bannerColor {
+     background: linear-gradient(180deg, rgba(13, 13, 31, 1) 30%, rgba(240, 24, 140, 1) 100%);
+  }
+  
 
   .termsHead {
     @apply text-lg font-semibold text-primary;
