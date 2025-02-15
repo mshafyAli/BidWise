@@ -15,35 +15,35 @@ const services = [
     name: "Web Development",
     bgImage: WebBg,
     description:
-      "Get an edge over your competitors and boost your profitability with magnetic web experiences.Maven Tech Digital is the choice of the UAE’s leading brands for website design and web development services in Dubai. Whether it’s custom web development or WordPress web development, we make sure you get the best of both worlds in the form of a responsive, secure, and high-performance website.",
+      "At Bidwise, we don't just build websites; we craft digital experiences that leave a lasting impression. As a leading web development agency. we have successfully designed and developed over 300 websites, catering to diverse industries globally.",
     rightImage: WebRight,
   },
   {
     id: 2,
     name: "Mobile Application Development",
     bgImage: MobileBg,
-    description: "Develop high-performance mobile applications.",
+    description: "Bidwise is the best mobile app development company, Offering high quality, creative, scalable, and custom Mobile App Development services for IOS, Android, and cross-platform applications. Our skilled app developers build unparalleled mobile applications that ignite inspiration, engage your target audience, and promote your business online.",
     rightImage: MobileRight,
   },
   {
     id: 3,
     name: "Digital Marketing",
     bgImage: WebBg,
-    description: "Maximize your reach with digital marketing strategies.",
+    description: "Grow your online business with Bidwise, a leading digital marketing agency. Digital Gravity is a digital marketing company for small businesses with affordable multi-channel digital marketing services to various big and small businesses.",
     rightImage: WebRight,
   },
   {
     id: 4,
     name: "Digital Branding & Communication",
     bgImage: MobileBg,
-    description: "Maximize your reach with digital marketing strategies.",
+    description: "We stand among industry leaders and AI companies and offer our innovative powers of artificial intelligence, If you are struggling with challenges and are unable to cross hurdles of efficiency and productivity we can accelerate your business tasks with enhanced automation. Hence, let’s explore the exciting realm of AI and ML together and avail our AI development services today.",
     rightImage: WebRight,
   },
   {
     id: 5,
-    name: "UI/UX DESIGN",
+    name: "AI Developemt",
     bgImage: WebBg,
-    description: "Maximize your reach with digital marketing strategies.",
+    description: "Let Bidwise be your branding agency in creating an exceptional brand identity that will capture attention. Our services include strategic brand positioning, precise segmentation, and targeted marketing to attract the right audience for you. With a blend of innovation and expertise, we can transform your story, reshape narratives, and help you foster meaningful connections with consumers. Join us on a journey towards redefining how your brand thrives in the digital world.",
     rightImage: WebRight,
   },
 ];
@@ -72,8 +72,8 @@ function Services() {
         }}
       />
 
-      <div className="w-[90%] mx-auto">
-        <div className="flex flex-col md:flex-row md:justify-between items-center md:min-h-screen h-auto py-10 md:py-0 relative z-5">
+      <div className="layout">
+        <div className="flex flex-col md:flex-row md:justify-between items-center  h-auto py-16  relative z-5">
           {/* Left Section with service names */}
           <div
             className="flex items-center justify-center gap-4 pl-4 overflow-hidden"
@@ -103,9 +103,9 @@ function Services() {
                   animate={{
                     opacity: index === activeServiceIndex ? 1 : 0.4, // Control opacity for inactive items
                   }}
-                  className={`cursor-pointer transition-all duration-300 ${
+                  className={`cursor-pointer text-2xl transition-all duration-300 ${
                     activeServiceIndex === index
-                      ? "text-white font-bold"
+                      ? "text-white text-2xl font-bold"
                       : "text-white text-opacity-20"
                   }`}
                 >
@@ -122,15 +122,15 @@ function Services() {
             transition={{ duration: 0.5 }}
             className="text-white md:w-[60%] w-full"
           >
-            <h1>{services[activeServiceIndex].name}</h1>
+            <h1 className="text-3xl font-bold">{services[activeServiceIndex].name}</h1>
             <Image
               src={services[activeServiceIndex].rightImage}
               alt={services[activeServiceIndex].name}
-              width={640} // Adjust width as per your design
+              width={540} // Adjust width as per your design
               height={480} // Adjust height as per your design
-              className="w-full h-auto"
+              className=" "
             />
-            <p className="text-[11px]">
+            <p className="text-base pr-16 -mt-6">
               {services[activeServiceIndex].description}
             </p>
           </motion.div>

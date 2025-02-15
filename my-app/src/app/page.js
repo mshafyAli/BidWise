@@ -6,10 +6,11 @@ import { useRouter } from "next/navigation";
 import Head from "next/head";
 import Banner from "@/Components/Home/Banner";
 import Navbar from "@/Components/Navbar";
+import About from "@/Components/Home/About";
 
 // Dynamically import non-critical components
 const Footer = dynamic(() => import("@/Components/Footer"));
-const StickyBtn = dynamic(() => import("@/Components/StickyBtn"));
+const StickyBtn = dynamic(() => import("@/Components/Home/StickyBtn"));
 const SingleButton = dynamic(() => import("@/Components/SingleButton"));
 const Faq = dynamic(() => import("@/Components/Home/Faq"));
 const OurWork = dynamic(() => import("@/Components/Home/OurWork"));
@@ -61,15 +62,16 @@ const Home = () => {
       </Head>
       <Navbar />
       <Banner />
+      <About/>
       <Services />
       <OurWork />
       <Brands />
       <Award />
       <Faq />
       <Worth />
-      <SingleButton />
+      <StickyBtn/>
+      {/* <SingleButton /> */}
       <Footer />
-      {/* <StickyBtn /> */}
     </div>
   );
 };

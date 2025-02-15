@@ -139,8 +139,8 @@ export default function RootLayout({ children }) {
 
         {children}
 
-        <TawkToComponent />
-        <DiscountModal />
+        {/* <TawkToComponent /> */}
+        {/* <DiscountModal /> */}
       </body>
     </html>
   );
