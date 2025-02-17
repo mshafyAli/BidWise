@@ -12,6 +12,8 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
+
 
 const components = [
   {
@@ -46,8 +48,12 @@ const components = [
 ];
 
 const Navbar = () => {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+
   return (
-    <nav className="bg-[#0D0D1F]">
+    <nav className={`${isHome ? "bg-[#0D0D1F]" : "bg-transparent"}  w-full  transition-colors duration-300`}>
       <div className="layout  py-6 ">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -73,9 +79,12 @@ const Navbar = () => {
             </Link>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-[#0D0D1F] text-white">
+                {/* <NavigationMenuTrigger className="bg-[#0D0D1F] text-white">
                   Development
-                </NavigationMenuTrigger>
+                </NavigationMenuTrigger> */}
+                <NavigationMenuTrigger className={`${isHome ? "bg-[#0D0D1F]" : "bg-transparent"} text-white `}>
+  Development
+</NavigationMenuTrigger>
                 <NavigationMenuContent className="bg-tertiary text-white">
                   <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] ">
                     <li className="row-span-3">
@@ -95,7 +104,7 @@ const Navbar = () => {
                         </a>
                       </NavigationMenuLink>
                     </li>
-                    <ListItem href="/docs" title="Web Development">
+                    <ListItem href="/web-development" title="Web Development">
                       Re-usable components built using Radix UI and Tailwind
                       CSS.
                     </ListItem>
@@ -178,7 +187,7 @@ const Navbar = () => {
           </NavigationMenu>
 
           {/* CTA Button */}
-          <button className="bg-tertiary text-white px-6 py-2 rounded-full hover:bg-[#d1165f] transition-colors">
+          <button className="bg-primary text-white px-6 py-2 rounded-full hover:bg-[#d1165f] transition-colors">
             Contact us
           </button>
         </div>

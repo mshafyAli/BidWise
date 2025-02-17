@@ -61,7 +61,12 @@
   .bannerColor {
      background: linear-gradient(180deg, rgba(13, 13, 31, 1) 30%, rgba(240, 24, 140, 1) 100%);
   }
-  
+  .heading {
+    @apply text-2xl md:text-4xl font-bold;
+  }
+  .para {
+    @apply lg:text-base text-base;
+  }
 
   .termsHead {
     @apply text-lg font-semibold text-primary;

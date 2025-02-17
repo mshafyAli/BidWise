@@ -13,7 +13,7 @@ module.exports = {
   		colors: {
   			primary: '#E6186F',
 			secondary: "#FFBA1A",
-  			tertiary: '#E6186F',
+  			tertiary: '#0D0D1F',
   			darkGray: '#363636',
   			green: '#51B27E',
   			para: '#696969',
@@ -54,7 +54,8 @@ module.exports = {
   		backgroundImage: {
   			AwardBg: "url('/AwardBg.webp')",
   			AboutBg: "url('/src/assets/AboutBg.svg')",
-  			servicesHero: "url('/src/assets/serviceshero.jpeg')",
+  			servicesHero: "url('/serviceshero.svg')",
+  			digitalPresence: "url('/digitalPresence.svg')",
   		},
   		keyframes: {
   			'carousel-move': {

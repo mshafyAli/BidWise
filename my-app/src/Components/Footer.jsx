@@ -128,7 +128,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2 bg-[#353535] h-[600px]">
+        <div className="w-1/2 bg-tertiary h-[600px]">
           <div className="flex justify-start gap-10   pt-[16rem] text-white px-12">
             {/* Overview Column */}
             <div className=" w-1/6 lg:w-1/5  ">
