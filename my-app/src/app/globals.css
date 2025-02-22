@@ -18,6 +18,13 @@
     background-size: cover;
     background-position: center;
   }
+
+  .review{
+    background-image: url('/Angelina-P.webp');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+  }
   @media (min-width: 1024px) { /* For laptops and desktops */
     .banner {
       background-position: top; /* Adjust as needed */

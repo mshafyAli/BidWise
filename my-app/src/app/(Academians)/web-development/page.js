@@ -4,6 +4,8 @@ import React from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import NavBannerBg from "@/Components/WebService/NavBannerBg";
+import Reviews from "@/Components/WebService/Reviews";
+
 
 
 // Dynamically import non-critical components
@@ -14,6 +16,7 @@ const BusinessNeeds = dynamic(() =>
 );
 const DigitalPresence = dynamic(() => import("@/Components/WebService/DigitalPresence"));
 const Services = dynamic(() => import("@/Components/WebService/Services"));
+const OurProcess = dynamic(() => import("@/Components/WebService/OurProcess"));
 const StickyBtn = dynamic(() => import("@/Components/Home/StickyBtn"));
 
 const Home = () => {
@@ -30,6 +33,8 @@ const Home = () => {
       <BusinessNeeds />
       <Services />
       <DigitalPresence />
+      <OurProcess/>
+      <Reviews/>
       <Footer />
       <StickyBtn />
     </div>
