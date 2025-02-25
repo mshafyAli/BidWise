@@ -77,7 +77,7 @@ const Banner = () => {
                 Leverage the power of data-driven web design services
               </h1>
               <p className="para text-white py-4">
-                At Bidwise, we don't just build websites; we craft digital
+                At Bidwise, we don&apos;t just build websites; we craft digital
                 experiences that leave a lasting impression. As a leading web
                 development agency, we have successfully designed and developed
                 over 300 websites, catering to diverse industries both locally

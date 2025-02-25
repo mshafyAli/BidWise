@@ -21,10 +21,10 @@ export default function Banner() {
             <div className="flex lg:flex-row flex-col  gap-12 items-center">
               <div className="space-y-8">
                 <h1 className="text-white text-6xl font-bold leading-tight">
-                  Smash every paid search target you've got
+                  Smash every paid search target you&apos;ve got
                 </h1>
                 <p className="text-white/90 text-lg md:text-xl max-w-2xl">
-                  As a Google and Bing certified PPC agency, we'll find the data
+                  As a Google and Bing certified PPC agency, we&apos;ll find the data
                   that makes a difference to your brand—then use it to drive
                   real, tangible growth.
                 </p>

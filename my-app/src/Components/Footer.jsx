@@ -85,12 +85,12 @@ const Footer = () => {
 
         <div className="bg-primary w-1/2 h-[600px]">
           <div className="flex flex-col lg:pl-[10rem] sm:pl-[12rem] pt-[14rem]">
-            <h1 className="text-white  text-2xl">Let's build </h1>
+            <h1 className="text-white  text-2xl">Let&apos;s build </h1>
             <h1 className="text-white font-semibold text-4xl">
               something awesome
             </h1>
             <p className="text-white py-2">
-              Reach out to our team and we'll get back to you within a day.
+              Reach out to our team and we&apos;ll get back to you within a day.
             </p>
           </div>
           <div className="flex items-start text-white gap-4 pr-24  lg:pl-[10rem] sm:pl-[12rem]">
@@ -200,13 +200,13 @@ const Footer = () => {
             Design.Build.Launch
           </h1>
           <div className="pt-8">
-            <h1 className="text-white  text-xl">Let's build </h1>
+            <h1 className="text-white  text-xl">Let&apos;s build </h1>
             <h1 className="text-white font-semibold text-3xl">
               something awesome
             </h1>
           </div>
           <p className="text-white py-2">
-            Reach out to our team and we'll get back to you within a day.
+            Reach out to our team and we&apos;ll get back to you within a day.
           </p>
           <p className="text-white py-2">
             Office The Meydan Hotel, Business Center, 1-M Floor, Nad Al Sheba,

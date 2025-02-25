@@ -11,7 +11,7 @@ import Navbar from "@/Components/Navbar";
 const Footer = dynamic(() => import("@/Components/Footer"));
 const StickyBtn = dynamic(() => import("@/Components/StickyBtn"));
 const SingleButton = dynamic(() => import("@/Components/SingleButton"));
-const SubSection = dynamic(() => import("@/Components/CaseStudies/SubSection"));
+// const SubSection = dynamic(() => import("@/Components/CaseStudies/SubSection"));
 
 
 
@@ -58,7 +58,7 @@ const Home = () => {
       </Head>
       <Navbar />
       <Banner />
-      <SubSection/>
+      {/* <SubSection/> */}
       <SingleButton />
       <Footer />
       <StickyBtn />

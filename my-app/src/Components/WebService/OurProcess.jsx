@@ -62,8 +62,8 @@ const OurProcess = () => {
               specifications, creating wireframes, and obtaining your approval
               before moving forward. Our seasoned web experts guide you through
               every step of the journey, right till the end, ensuring your
-              website aligns with your brand’s objectives. Your vision deserves
-              nothing less than perfection, and that's exactly what our process
+              website aligns with your brand&apos;s objectives. Your vision deserves
+              nothing less than perfection, and that&apos;s exactly what our process
               is designed to achieve.
             </p>
           </div>
