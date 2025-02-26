@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 import NavBannerBg from "@/Components/WebService/NavBannerBg";
 import Reviews from "@/Components/WebService/Reviews";
+import Featured from "@/Components/WebService/Featured";
 
 
 
@@ -33,6 +34,7 @@ const Home = () => {
       <BusinessNeeds />
       <Services />
       <DigitalPresence />
+      <Featured/>
       <OurProcess/>
       <Reviews/>
       <Footer />

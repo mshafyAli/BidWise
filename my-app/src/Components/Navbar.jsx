@@ -121,7 +121,7 @@ const Navbar = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-[#0D0D1F] text-white">
+                <NavigationMenuTrigger className={`${isHome ? "bg-[#0D0D1F]" : "bg-transparent"} text-white `}>
                   Digital Marketing
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="bg-tertiary text-white">
@@ -139,7 +139,7 @@ const Navbar = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem className="">
-                <NavigationMenuTrigger className="bg-[#0D0D1F] text-white">
+                <NavigationMenuTrigger className={`${isHome ? "bg-[#0D0D1F]" : "bg-transparent"} text-white `}>
                   AI Solutions
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="bg-tertiary text-white relative">
