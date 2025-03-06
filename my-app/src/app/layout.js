@@ -15,7 +15,7 @@ const DiscountModal = dynamic(() => import("@/Components/DiscountModel"));
 const outfit = Outfit({ subsets: ["latin"], display: "swap" });
 
 export default function RootLayout({ children }) {
-  const gtmId = "GTM-5JTC4XX3";
+  const gtmId = "GTM-xxxxxxxxx";
 
   const pathname = usePathname();
 
@@ -122,10 +122,10 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        <Script
+        {/* <Script
           src="https://webclicksees.onrender.com/script.js"
           strategy="lazyOnload"
-        />
+        /> */}
 
         {/* noscript fallback for GTM */}
         <noscript

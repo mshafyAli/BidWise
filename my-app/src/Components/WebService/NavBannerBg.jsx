@@ -3,7 +3,7 @@ import Navbar from "../Navbar";
 
 const NavBannerBg = () => {
   return (
-    <div className="relative w-full h-[700px]">
+    <div className="relative w-full h-auto">
       {/* Background Image and Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
       

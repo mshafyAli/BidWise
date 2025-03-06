@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { FaReact } from "react-icons/fa";
 import Image from "next/image";
+import { Menu } from "lucide-react"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,7 +13,10 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+// import { Button } from "@/components/ui/button"
 import { usePathname } from "next/navigation";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 
 
 const components = [
@@ -51,40 +55,131 @@ const Navbar = () => {
   const pathname = usePathname();
   const isHome = pathname === "/";
 
-
   return (
-    <nav className={`${isHome ? "bg-[#0D0D1F]" : "bg-transparent"}  w-full  transition-colors duration-300`}>
+    <nav
+      className={`${
+        isHome ? "bg-[#0D0D1F]" : "bg-transparent"
+      }  w-full  transition-colors duration-300`}
+    >
       <div className="layout  py-6 ">
         <div className="flex items-center justify-between">
           {/* Logo */}
-        <div>
-        <Link href="/">
-          <Image
-              src="/logo.png"
-              alt="Logo"
-              width="300"
-              height="300"
-              quality={60}
-              priority
-              className=""
-            />
-          </Link>
-        </div>
+          <div>
+            <Link href="/">
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width="300"
+                height="300"
+                quality={60}
+                priority
+                className=""
+              />
+            </Link>
+          </div>
+
+          {/* Mobile Menue */}
+          <Sheet>
+            <SheetTrigger asChild className="md:hidden">
+              {/* <Button variant="ghost" size="30" className="bg-white text-white"> */}
+                <Menu size={30} className="text-white" />
+                {/* <span className="sr-only">Toggle menu</span> */}
+              {/* </Button> */}
+            </SheetTrigger>
+            <SheetContent
+              side="right"
+              className="bg-[#0D0D1F] text-white w-[80vw] max-w-sm"
+            >
+              <div className="flex flex-col gap-6 py-6">
+                <Link href="/" className="text-white text-lg font-medium">
+                  About
+                </Link>
+
+                <Collapsible className="w-full">
+                  <CollapsibleTrigger className="flex w-full items-center justify-between text-lg font-medium">
+                    Development
+                    <span className="text-xs">▼</span>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="mt-2 space-y-2 pl-4">
+                    <Link href="/web-development" className="block py-2">
+                      Web Development
+                    </Link>
+                    <Link href="/docs/installation" className="block py-2">
+                      App Development
+                    </Link>
+                    <Link
+                      href="/docs/primitives/typography"
+                      className="block py-2"
+                    >
+                      E-commerce Websites
+                    </Link>
+                  </CollapsibleContent>
+                </Collapsible>
+
+                <Collapsible className="w-full">
+                  <CollapsibleTrigger className="flex w-full items-center justify-between text-lg font-medium">
+                    Digital Marketing
+                    <span className="text-xs">▼</span>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="mt-2 space-y-2 pl-4">
+                    {components.map((component) => (
+                      <Link
+                        key={component.title}
+                        href={component.href}
+                        className="block py-2"
+                      >
+                        {component.title}
+                      </Link>
+                    ))}
+                  </CollapsibleContent>
+                </Collapsible>
+
+                <Collapsible className="w-full">
+                  <CollapsibleTrigger className="flex w-full items-center justify-between text-lg font-medium">
+                    AI Solutions
+                    <span className="text-xs">▼</span>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="mt-2 space-y-2 pl-4">
+                    <Link href="/docs" className="block py-2">
+                      ChatBot Development
+                    </Link>
+                    <Link href="/docs/installation" className="block py-2">
+                      AI Enterprise Search
+                    </Link>
+                    <Link
+                      href="/docs/primitives/typography"
+                      className="block py-2"
+                    >
+                      AI Automation
+                    </Link>
+                  </CollapsibleContent>
+                </Collapsible>
+
+                <Link href="/" className="text-white text-lg font-medium">
+                  Results
+                </Link>
+                <button className="bg-primary text-white px-6 py-2 rounded-full hover:bg-[#d1165f] transition-colors">
+                  Contact us
+                </button>
+              </div>
+            </SheetContent>
+          </Sheet>
 
           {/* Navigation Links */}
 
-          <NavigationMenu className="relative z-50 ">
+          <NavigationMenu className="relative z-50 hidden md:flex ">
             <Link href="/" className="text-white pr-4">
               About
             </Link>
             <NavigationMenuList>
               <NavigationMenuItem>
-                {/* <NavigationMenuTrigger className="bg-[#0D0D1F] text-white">
+                <NavigationMenuTrigger
+                  className={`${
+                    isHome ? "bg-[#0D0D1F]" : "bg-transparent"
+                  } text-white `}
+                >
                   Development
-                </NavigationMenuTrigger> */}
-                <NavigationMenuTrigger className={`${isHome ? "bg-[#0D0D1F]" : "bg-transparent"} text-white `}>
-  Development
-</NavigationMenuTrigger>
+                </NavigationMenuTrigger>
                 <NavigationMenuContent className="bg-tertiary text-white">
                   <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] ">
                     <li className="row-span-3">
@@ -121,7 +216,11 @@ const Navbar = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className={`${isHome ? "bg-[#0D0D1F]" : "bg-transparent"} text-white `}>
+                <NavigationMenuTrigger
+                  className={`${
+                    isHome ? "bg-[#0D0D1F]" : "bg-transparent"
+                  } text-white `}
+                >
                   Digital Marketing
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="bg-tertiary text-white">
@@ -139,7 +238,11 @@ const Navbar = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem className="">
-                <NavigationMenuTrigger className={`${isHome ? "bg-[#0D0D1F]" : "bg-transparent"} text-white `}>
+                <NavigationMenuTrigger
+                  className={`${
+                    isHome ? "bg-[#0D0D1F]" : "bg-transparent"
+                  } text-white `}
+                >
                   AI Solutions
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="bg-tertiary text-white relative">
@@ -187,7 +290,7 @@ const Navbar = () => {
           </NavigationMenu>
 
           {/* CTA Button */}
-          <button className="bg-primary text-white px-6 py-2 rounded-full hover:bg-[#d1165f] transition-colors">
+          <button className="bg-primary text-white px-6 py-2 rounded-full hover:bg-[#d1165f] transition-colors hidden md:block">
             Contact us
           </button>
         </div>
@@ -217,4 +320,3 @@ function ListItem({ title, children, href }) {
     </li>
   );
 }
-

@@ -94,7 +94,7 @@ const settings = {
 const Agency = () => {
   return (
     <div className="layout my-12">
-      <div className="md:flex items-start flex-col md:flex-row justify-start gap-10 hidden">
+      <div className="flex items-start flex-col md:flex-row justify-start gap-10">
         <div className="md:w-1/3 w-full ">
           <h1 className="md:text-4xl text-2xl font-semibold">
           The Best{" "}

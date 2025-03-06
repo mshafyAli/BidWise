@@ -8,8 +8,8 @@ import Link from "next/link";
 
 const Banner = () => {
   return (
-    <div className="layout py-8">
-      <div className=" flex flex-col md:flex-row items-center justify-between ">
+    <div className="layout md:pt-16 md:pb-[8rem] pt-6 pb-12">
+      <div className=" flex flex-col md:flex-row items-center justify-between gap-6">
         {/* left side container */}
         <div className="md:w-[60%] ">
           <div className="flex items-center justify-start gap-10">
